@@ -1,5 +1,9 @@
 # Datadog Research Notes
 
+## Research documents
+
+- [Inferred Services](./inferred-services.md) — dependency inference from outbound spans, peer identity resolution, APM stats, OpenTelemetry mapping, sampling and cardinality considerations.
+
 ## Areas
 
 - APM
