@@ -1,10 +1,10 @@
-# Datadog Research Notes
+# Datadog 调研
 
-## Research documents
+## 调研文档
 
-- [Inferred Services](./inferred-services.md) — dependency inference from outbound spans, peer identity resolution, APM stats, OpenTelemetry mapping, sampling and cardinality considerations.
+- [推断服务（Inferred Services）](./inferred-services.md) — 调研 Datadog 如何根据出站 Span 推导远端依赖，包括 Peer Identity、实体解析、APM Metrics、OpenTelemetry 映射、Sampling 与 Cardinality。
 
-## Areas
+## 调研方向
 
 - APM
 - Infrastructure Monitoring
@@ -15,25 +15,25 @@
 - Universal Service Monitoring
 - OpenTelemetry / DDOT
 - Agent Observability
-- Fleet management
-- Cost and usage controls
+- Fleet Management
+- 成本与用量治理
 
-## OpenTelemetry interoperability matrix
+## OpenTelemetry 互操作矩阵
 
-Track this per language and signal rather than assuming one global answer.
+不同语言、Signal 和部署方式应该分别验证，不能假设它们具有完全一致的行为。
 
-| Scenario | Instrumentation | Processing | Backend |
+| 场景 | Instrumentation | 数据处理 | Backend |
 |---|---|---|---|
-| OTel-native | OTel SDK / auto | Upstream OTel Collector | Datadog |
-| DDOT | OTel or Datadog instrumentation | Datadog Distribution of OTel Collector | Datadog |
-| Datadog-native | Datadog SDK | Datadog Agent / DDOT | Datadog |
-| Hybrid | OTel API + Datadog SDK or mixed libraries | Agent / DDOT / Collector | Datadog |
+| OTel Native | OTel SDK / Auto Instrumentation | Upstream OTel Collector | Datadog |
+| DDOT | OTel 或 Datadog Instrumentation | Datadog Distribution of OTel Collector | Datadog |
+| Datadog Native | Datadog SDK | Datadog Agent / DDOT | Datadog |
+| Hybrid | OTel API + Datadog SDK 或混合 Library | Agent / DDOT / Collector | Datadog |
 
-## Evaluation questions
+## 主要调研问题
 
-- Which Datadog features are available for each setup?
-- Which setup preserves vendor-neutral instrumentation?
-- Where are sampling and enrichment performed?
-- Which attributes/tags are transformed at ingestion?
-- What are the operational differences between upstream Collector and DDOT?
-- What is required for logs-traces-metrics correlation?
+- 每种接入方式可以使用哪些 Datadog 能力？
+- 哪种接入方式能够保留 vendor-neutral instrumentation？
+- Sampling 与数据增强分别发生在哪一层？
+- Ingestion 过程中哪些 Attributes / Tags 会被转换？
+- Upstream Collector 与 DDOT 在运行和数据模型上有哪些差异？
+- Logs、Traces、Metrics 之间的关联需要满足哪些条件？
