@@ -1148,19 +1148,15 @@ Agent Probabilistic Sampler: DROP
 
 ## 24. Retention Sampling
 
+> Retention 已拆分为独立调研文档：[APM Trace 数据保留策略](./apm-trace-retention.md)。本节只保留 Sampling 文档所需的概要。
+
 Trace 成功 Ingest 后，进入第二套采样系统：
 
 ~~~text
 Retention
 ~~~
 
-Retention Filter 决定哪些 Span 被：
-
-~~~text
-Indexed
-+
-Stored for 15 days
-~~~
+Retention Filter 决定哪些 Span 被索引并进入历史可查询数据集。具体 Retention Duration 取决于数据类型、Retention 机制和客户套餐；当前 Datadog Data Retention Periods 文档显示 APM Indexed Spans 通常为 15 或 30 天。
 
 它不会改变：
 
@@ -1175,7 +1171,7 @@ flowchart LR
     I[Ingested Span]
     L[Live Search<br/>15 分钟]
     F[Retention Filters]
-    X[Indexed<br/>15 天]
+    X[Indexed<br/>长期保留]
 
     I --> L
     I --> F --> X
@@ -1339,7 +1335,7 @@ Ingestion Sampling
 ### 问题 B
 
 ~~~text
-已经发送的数据里，我们希望哪些 Trace 15 天后仍然可以查询？
+已经发送的数据里，我们希望哪些 Trace 在 Live Search 窗口之后仍然可以历史查询？
 ~~~
 
 这是：
@@ -1375,7 +1371,7 @@ Retention Sampling
 | 控制目标 | 发多少 Trace | 长期索引多少 |
 | 影响 Ingestion Volume | 是 | 否 |
 | 影响最近 15 分钟 Live Search 数据 | 是 | 否 |
-| 影响 15 天 Indexed Search | 间接 | 直接 |
+| 影响历史 Indexed Search | 间接 | 直接 |
 | 典型机制 | Head / Tail / Probabilistic | Intelligent / Custom Filters |
 
 可用于观察使用量的 Datadog Metrics 包括：
