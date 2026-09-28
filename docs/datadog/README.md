@@ -3,6 +3,7 @@
 ## 调研文档
 
 - [推断服务（Inferred Services）](./inferred-services.md) — 调研 Datadog 如何根据出站 Span 推导远端依赖，包括 Peer Identity、实体解析、APM Metrics、OpenTelemetry 映射、Sampling 与 Cardinality。
+- [APM 采样策略](./apm-sampling.md) — 调研 Datadog APM 的 Ingestion Sampling、Retention、Automatic/Adaptive Sampling、Error/Rare/Single Span Sampling，以及 OpenTelemetry Head/Tail Sampling 对 APM Metrics 和 Trace 完整性的影响。
 
 ## 调研方向
 
@@ -37,3 +38,5 @@
 - Ingestion 过程中哪些 Attributes / Tags 会被转换？
 - Upstream Collector 与 DDOT 在运行和数据模型上有哪些差异？
 - Logs、Traces、Metrics 之间的关联需要满足哪些条件？
+- Sampling 发生在 SDK、Agent 还是 Collector，会如何影响 Trace 完整性和 APM Metrics？
+- Ingestion Sampling 与 Retention Sampling 应如何分别控制成本和诊断覆盖率？
