@@ -3,7 +3,8 @@
 ## 调研文档
 
 - [推断服务（Inferred Services）](./inferred-services.md) — 调研 Datadog 如何根据出站 Span 推导远端依赖，包括 Peer Identity、实体解析、APM Metrics、OpenTelemetry 映射、Sampling 与 Cardinality。
-- [APM 采样策略](./apm-sampling.md) — 调研 Datadog APM 的 Ingestion Sampling、Retention、Automatic/Adaptive Sampling、Error/Rare/Single Span Sampling，以及 OpenTelemetry Head/Tail Sampling 对 APM Metrics 和 Trace 完整性的影响。
+- [APM 采样策略](./apm-sampling.md) — 调研 Datadog APM 的 Ingestion Sampling、Automatic/Adaptive Sampling、Error/Rare/Single Span Sampling，以及 OpenTelemetry Head/Tail Sampling 对 APM Metrics 和 Trace 完整性的影响。
+- [APM Trace 数据保留策略](./apm-trace-retention.md) — 调研 Intelligent Retention、Diversity/1% Flat Sampling、Span-level/Trace-level Retention、Trace Queries、Monitor 数据集、Retention 时长与 Indexed Span 成本。
 
 ## 调研方向
 
