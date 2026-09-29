@@ -5,6 +5,14 @@
 - [推断服务（Inferred Services）](./inferred-services.md) — 调研 Datadog 如何根据出站 Span 推导远端依赖，包括 Peer Identity、实体解析、APM Metrics、OpenTelemetry 映射、Sampling 与 Cardinality。
 - [APM 采样策略](./apm-sampling.md) — 调研 Datadog APM 的 Ingestion Sampling、Automatic/Adaptive Sampling、Error/Rare/Single Span Sampling，以及 OpenTelemetry Head/Tail Sampling 对 APM Metrics 和 Trace 完整性的影响。
 - [APM Trace 数据保留策略](./apm-trace-retention.md) — 调研 Intelligent Retention、Diversity/1% Flat Sampling、Span-level/Trace-level Retention、Trace Queries、Monitor 数据集、Retention 时长与 Indexed Span 成本。
+- [APM Trace Pipeline](./apm-trace-pipeline.md) — 从数据生命周期角度分析 Instrumentation、Sampling、Ingestion、Trace Metrics、Processing、Retention、查询模型、Usage/Cost，以及 OpenTelemetry → Datadog 的语义映射。
+
+## 调研留存约定
+
+- 所有形成明确结论、架构分析或实验设计的调研，都应保存为仓库中的 Markdown 文档，而不是只保留在聊天记录中。
+- 文档正文使用简体中文；协议名、属性名、配置项和必要的英文技术术语保持原文。
+- 新调研优先补充到已有主题文档；如果形成独立知识域，则新建文档并在本索引中登记。
+- 事实、产品行为和推断应明确区分；可验证的结论应附官方文档或实验依据。
 
 ## 调研方向
 
