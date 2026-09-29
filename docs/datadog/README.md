@@ -6,6 +6,7 @@
 - [APM 采样策略](./apm-sampling.md) — 调研 Datadog APM 的 Ingestion Sampling、Automatic/Adaptive Sampling、Error/Rare/Single Span Sampling，以及 OpenTelemetry Head/Tail Sampling 对 APM Metrics 和 Trace 完整性的影响。
 - [APM Trace 数据保留策略](./apm-trace-retention.md) — 调研 Intelligent Retention、Diversity/1% Flat Sampling、Span-level/Trace-level Retention、Trace Queries、Monitor 数据集、Retention 时长与 Indexed Span 成本。
 - [APM Trace Pipeline](./apm-trace-pipeline.md) — 从数据生命周期角度分析 Instrumentation、Sampling、Ingestion、Trace Metrics、Processing、Retention、查询模型、Usage/Cost，以及 OpenTelemetry → Datadog 的语义映射。
+- [APM Trace Metrics 与 Service Entry Span](./apm-trace-metrics-service-entry-span.md) — 深入分析 Trace Metrics、Service Entry Span、Measured Span、Primary Operation、Metric Namespace、Cardinality，以及 OpenTelemetry SpanKind → Datadog APM Stats 的映射。
 
 ## 调研留存约定
 
