@@ -294,6 +294,8 @@ flowchart LR
 
 ## 9. Service Entry Span
 
+> 深入调研见：[APM Trace Metrics 与 Service Entry Span](./apm-trace-metrics-service-entry-span.md)。
+
 Datadog 的 APM Trace Metrics 依赖一个重要概念：
 
 ~~~text
@@ -997,6 +999,7 @@ Inferred Services 是 Trace Pipeline 的 Entity Resolution 分支之一。
 详细研究见：
 
 - [推断服务（Inferred Services）](./inferred-services.md)
+- [APM Trace Metrics 与 Service Entry Span](./apm-trace-metrics-service-entry-span.md)
 
 ~~~mermaid
 flowchart TD
